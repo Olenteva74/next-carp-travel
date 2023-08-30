@@ -15,7 +15,7 @@ import Image from "next/image";
 import { Section } from "../Section";
 import { Container } from "../Container";
 import { Title } from "../Title";
-import { Subtitle } from "../Subtitle";
+import { Subtitle } from "../Contact/Subtitle";
 import { Paragraph } from "./Paragraph";
 import { Fraction } from "./Fraction";
 import { NavList } from "./Navlist";

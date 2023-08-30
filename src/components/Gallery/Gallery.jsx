@@ -1,8 +1,8 @@
 import Image from "next/image";
 import gallery from "../data/gallery.json";
-import { Section } from "./Section";
-import { Container } from "./Container";
-import { Title } from "./Title";
+import { Section } from "../Section";
+import { Container } from "../Container";
+import { Title } from "../Title";
 import { Slider } from "./Slider";
 
 export const Gallery = () => {

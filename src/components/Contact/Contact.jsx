@@ -1,7 +1,7 @@
 import contact from "../data/contact.json";
-import { Section } from "./Section";
-import { Container } from "./Container";
-import { Title } from "./Title";
+import { Section } from "../Section";
+import { Container } from "../Container";
+import { Title } from "../Title";
 import { Subtitle } from "./Subtitle";
 import { LinkItem } from "./LinkItem";
 import { ContactForm } from "./ContactForm";
