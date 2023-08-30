@@ -30,7 +30,7 @@ export const Services = () => {
   return (
     <Section name="services">
       <Container>
-        <div className="md:flex md:justify-between md:mb-9">
+        <div className="md:flex md:justify-between md:mb-9 xl:mb-[21px]">
           <div className="mb-6 md:mb-0">
             <Title
               title={services.titleThin}
@@ -45,7 +45,7 @@ export const Services = () => {
           </div>
         </div>
         <div className="md:flex md:gap-[20px]">
-          <div className="w-[280px] h-[213px] md:w-[463px] md:h-[400px] xl:w-[607px] xl:h-[510px] mb-3 md:mb-0 ">
+          <div className="w-[280px] h-[213px] md:w-[463px] md:h-[400px] xl:w-[607px] xl:h-[492px] mb-3 md:mb-0 ">
             <Swiper
               spaceBetween={10}
               effect={"fade"}
@@ -82,8 +82,10 @@ export const Services = () => {
                 setindex={handleInd}
               />
             </div>
-            <div className="w-[280px] md:w-[221px] max-h-[120px] xl:w-[293px] xl:max-h-[168px] xl:flex xl:flex-row-reverse">
+            <div className="xl:flex xl:flex-row-reverse">
+            <div className="w-[280px] md:w-[221px] max-h-[120px] xl:w-[293px] xl:max-h-[168px]">
               <Paragraph text={services.paragraph[activeInd]} />
+            </div>
             </div>
           </div>
         </div>
