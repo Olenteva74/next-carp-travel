@@ -2,7 +2,7 @@ import { Section } from "../Section";
 import { TheHeader } from "../TheHeader";
 import { TheHero } from "../Hero";
 
-export const Home = () => {
+export const HomePage = () => {
     return (
         <Section name="home">
          <TheHeader/>

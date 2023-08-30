@@ -5,12 +5,12 @@ import { Gallery } from "@/components/Gallery/Gallery";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Career } from "@/components/Career";
-import { Home } from "@/components/Home";
+import { HomePage } from "@/components/HomePage";
 
 export default function Home() {
   return (
     <>
-      <Home />
+      <HomePage />
       <About />
       <Services />
       <Career />
