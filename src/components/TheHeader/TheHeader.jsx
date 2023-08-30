@@ -19,7 +19,7 @@ export const TheHeader = () => {
 
   return (
     <>
-      <header className="home">
+      <header>
        <HeaderContainer>
        <div className="flex justify-between items-center">
           <TheLogo alt={header.alt} />

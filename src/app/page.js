@@ -5,19 +5,17 @@ import { Gallery } from "@/components/Gallery/Gallery";
 import { About } from "@/components/About";
 import { Services } from "@/components/Services";
 import { Career } from "@/components/Career";
+import { Home } from "@/components/Home";
 
 export default function Home() {
   return (
     <>
-      <TheHeader />
-      <main>
-        <TheHero />
-        <About />
-        <Services />
-        <Career />
-        <Gallery />
-        <Contact />
-      </main>
+      <Home />
+      <About />
+      <Services />
+      <Career />
+      <Gallery />
+      <Contact />
     </>
   );
 }
