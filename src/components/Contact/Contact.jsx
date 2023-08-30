@@ -1,4 +1,4 @@
-import contact from "../data/contact.json";
+import contact from "../../data/contact.json";
 import { Section } from "../Section";
 import { Container } from "../Container";
 import { Title } from "../Title";

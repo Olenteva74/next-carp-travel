@@ -1,5 +1,5 @@
 import Image from "next/image";
-import gallery from "../data/gallery.json";
+import gallery from "../../data/gallery.json";
 import { Section } from "../Section";
 import { Container } from "../Container";
 import { Title } from "../Title";
@@ -9,7 +9,7 @@ export const Gallery = () => {
   return (
     <Section name="gallery">
       <Container>
-        <div className="md:text-center xl:text-start">
+        <div className="md:text-center xl:text-start mb-6 md:mb-[66px] xl:mb-[15px]">
           <Title title={gallery.titleThin} titleAccent={gallery.titleMedium} />
         </div>
         <ul className="flex flex-col gap-6 md:hidden">
@@ -21,7 +21,7 @@ export const Gallery = () => {
             );
           })}
         </ul>
-        <Slider />
+        <Slider images={gallery.images}/>
       </Container>
     </Section>
   );

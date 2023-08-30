@@ -5,15 +5,15 @@
     "nextButton": "NEXT",
     "images": [
         {
-            "url": "/gallery/mountain.jpg",
+            "url": "/mountain.jpg",
             "alt": "high angle shot beautiful mountainous landscape with hills cloudy sky"
         },
         {
-            "url": "/gallery/lake.jpg",
+            "url": "/lake.jpg",
             "alt": "breathtaking view lake high carpathian mountains"
         },
         {
-            "url":"/gallery/village.jpg",
+            "url":"/village.jpg",
             "alt": "carpathian village"
         }
     ]

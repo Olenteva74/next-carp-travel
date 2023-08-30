@@ -6,15 +6,15 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { EffectFade, FreeMode, Navigation, A11y, Virtual } from "swiper/modules";
 import Image from "next/image";
-import gallery from "../data/gallery.json"
+// import gallery from "../data/gallery.json"
 
-export const Slider = () => {
+export const Slider = ({images}) => {
   const swiperRef = useRef();
   return (
     <div className="hidden md:flex h-[294px] xl:h-[447px]">
       <div className="w-[120px] xl:w-[313px] flex flex-col justify-end">
-        <div className="opacity-20 w-full h-[87px] xl:h-[225px] mb-[47px] xl:mb-[70px]">
-         <Image src="/gallery/mountain.jpg" width={120} height={87} alt="high angle shot beautiful mountainous landscape with hills cloudy sky"/>
+        <div className="opacity-20 w-[120px] xl:w-[305px] h-[87px] xl:h-[225px] mb-[47px] xl:mb-[70px]">
+         <Image src={images[0].url} width={120} height={87} alt={images[0].alt}/>
         </div>
         <div className="mb-[17px] xl:mb-0 text-[33px] font-thin text-end hover:opacity-40">
           <button type="button" onClick={() => swiperRef.current?.slidePrev()}>
@@ -36,10 +36,10 @@ export const Slider = () => {
           }}
           className="mySwiper"
         >
-          {gallery.images.map(({url, alt}, index) => {
+          {images.map((image, index) => {
             return (
-              <SwiperSlide key={ url} virtualIndex={index}>
-                <Image src={url} width={280} height={187} alt={alt}
+              <SwiperSlide key={index} virtualIndex={index}>
+                <Image src={image.url} width={415} height={294} alt={image.alt}
                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" />
               </SwiperSlide>
             )
@@ -49,7 +49,7 @@ export const Slider = () => {
 
       <div className="w-[120px] xl:w-[313px] flex flex-col justify-end">
         <div className="opacity-20 w-full h-[87px] xl:h-[225px] mb-[47px] xl:mb-[70px]">
-         <Image src={gallery.images[2].url} alt={gallery.images[2].alt} width={313} height={225} />
+         <Image src={images[2].url} alt={images[2].alt} width={120} height={87} />
         </div>
         <div className="mb-[17px] xl:mb-0 text-[33px] font-thin hover:opacity-40">
           <button type="button" onClick={() => swiperRef.current?.slideNext()}>
