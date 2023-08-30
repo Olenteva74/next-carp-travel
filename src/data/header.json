@@ -1,4 +1,6 @@
 {
-    "menu": "[About, Services, Career, Gallery, Contacts]",
-    "logo": "CarpTravel"
+    "menu": ["About", "Services", "Career", "Gallery", "Contacts"],
+    "alt": "CarpTravel",
+    "buttonOpen": "MENU",
+    "buttonClose": "CLOSE"
 }

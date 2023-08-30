@@ -1,4 +1,4 @@
-import { TheHeader } from "@/components/TheHeader";
+import { TheHeader } from "@/components/TheHeader/TheHeader";
 import { TheHero } from "@/components/TheHero";
 import { Contact } from "@/components/Contact";
 import { Gallery } from "@/components/Gallery";
