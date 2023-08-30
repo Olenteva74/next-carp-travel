@@ -5,7 +5,7 @@ import logo from "/public/logo.png";
 
 export const TheLogo = ({alt}) => {
   return (
-    <div>
+    <div className="w-[61px] h-[34px]">
       <Link to="/" className="cursor-pointer">
         <Image src={logo} alt={alt} width={61} height={34} />
       </Link>

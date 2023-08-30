@@ -1,7 +1,8 @@
 export const Section = ({name, children}) => {
+    const nameId = `/${name}`;
     return (
         <section
-        id={name}
+        id={nameId}
         className={name}
         >{children}</section>
     )

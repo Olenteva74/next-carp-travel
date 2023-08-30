@@ -4,7 +4,7 @@ import header from "../../data/header.json";
 import { TheLogo } from "./TheLogo";
 import { MobileMenu } from "./MobileMenu";
 import { Menu } from "./Menu";
-import { Container } from "../Container";
+import { HeaderContainer } from "./HeaderContainer";
 
 export const TheHeader = () => {
   const [isOpenMobileMenu, setIsOpenMobileMenu] = useState(false);
@@ -20,7 +20,7 @@ export const TheHeader = () => {
   return (
     <>
       <header>
-       <Container>
+       <HeaderContainer>
        <div className="flex justify-between items-center">
           <TheLogo alt={header.alt} />
           <nav className="hidden md:block">
@@ -37,11 +37,9 @@ export const TheHeader = () => {
             {header.buttonOpen}
           </button>
         </div>
-       </Container>
+       </HeaderContainer>
       </header>
       {isOpenMobileMenu && <MobileMenu onCloseMenu={handleCloseMenu} />}
     </>
   );
 };
-
-// className="mb-9 md:mb-[66px] xl:mb-[72px]"
