@@ -6,10 +6,12 @@ import { HeroSubtitle } from "./HeroSubtitle";
 import { HeroParagraph } from "./HeroParagraph";
 import { HeroButton } from "./HeroButton";
 import { HeroContainer } from "./HeroContainer";
+import { Section } from "../Section";
 
 export const TheHero = () => {
   return (
-    <HeroContainer>
+   <Section name="home">
+     <HeroContainer>
       <div
         className="flex flex-col md:flex-row md:justify-between
     md:grid md:grid-cols-[426px_230px] xl:grid-cols-[646px_305px] 
@@ -35,5 +37,6 @@ export const TheHero = () => {
         </div>
       </div>
     </HeroContainer>
+   </Section>
   );
 };

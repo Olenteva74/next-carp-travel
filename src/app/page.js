@@ -8,21 +8,16 @@ import { Career } from "@/components/Career";
 
 export default function Home() {
   return (
-    <main className="text-white">
-      <div
-        className="w-screen h-full bg-[rgba(2, 15, 8, 0.75)]
-    bg-hero md:bg-hero-tablet xl:bg-hero-desktop bg-no-repeat bg-cover"
-      >
-   
-          <TheHeader />
-          <TheHero />
-        
-      </div>
-      <About />
-      <Services />
-      <Career />
-      <Gallery />
-      <Contact />
-    </main>
+    <>
+      <TheHeader />
+      <main>
+        <TheHero />
+        <About />
+        <Services />
+        <Career />
+        <Gallery />
+        <Contact />
+      </main>
+    </>
   );
 }

@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+body {
+  color: #fff;
+}
+
 img {
   display: block;
   width: 100%;
@@ -190,7 +194,7 @@ img {
   background-color: #0A1813;
   background-image:  url("/bg/career/bg-mobile.jpg");
   background-size: cover;
-  background-repeat: repeat-x;
+  background-repeat: no-repeat;
   background-position: center;
 
   @media screen and (min-device-pixel-ratio: 2), 
@@ -200,7 +204,6 @@ img {
    }
 
    @media screen and (min-width: 768px) {
-    background-repeat: no-repeat;
     background-image: url("/bg/career/bg-tablet.jpg");
 
     @media screen and (min-device-pixel-ratio: 2), 
@@ -217,6 +220,43 @@ img {
     screen and (min-resolution: 192dpi), 
     screen and (min-resolution: 2dppx) {
      background-image:  url("/bg/career/bg-desktop@2x.jpg");
+   }
+   }
+}
+
+.home {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  background-color: #0A1813;
+  background-size: cover;
+  background-image:  url("/bg/home/bg-home-mobile.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+
+  @media screen and (min-device-pixel-ratio: 2), 
+   screen and (min-resolution: 192dpi), 
+   screen and (min-resolution: 2dppx) {
+  }
+  background-image:  url("/bg/home/bg-home-mobile@2x.jpg");
+
+   @media screen and (min-width: 768px) {
+     
+     background-image: url("/bg/home/bg-home-tablet.jpg");
+    @media screen and (min-device-pixel-ratio: 2), 
+    screen and (min-resolution: 192dpi), 
+    screen and (min-resolution: 2dppx) {
+    }
+    background-image: url("/bg/home/bg-home-tablet@2x.jpg");
+  }
+   
+   @media screen and (min-width: 1280px) {
+     
+     background-image:  url("/bg/home/bg-home-desktop.jpg");
+    @media screen and (min-device-pixel-ratio: 2), 
+    screen and (min-resolution: 192dpi), 
+    screen and (min-resolution: 2dppx) {
+     background-image:  url("/bg/home/bg-home-desktop@2x.jpg");
    }
    }
 }
