@@ -22,6 +22,15 @@ export const TheHeader = () => {
           <TheLogo />
           <nav className="hidden md:block">
             <ul className="flex md:gap-6 xl:gap-14 text-sm tracking-[1.4px] cursor-pointer">
+            <li className="hover:underline">
+                <Link to="about" smooth={true} duration={1500}>About</Link>
+              </li>
+              <li className="hover:underline">
+                <Link to="services" smooth={true} duration={1500}>Services</Link>
+              </li>
+              <li className="hover:underline">
+                <Link to="career" smooth={true} duration={1500}>Career</Link>
+              </li>
               <li className="hover:underline">
                 <Link to="gallery" smooth={true} duration={1500}>Gallery</Link>
               </li>

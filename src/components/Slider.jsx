@@ -4,7 +4,9 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "swiper/css/navigation";
-import { EffectFade, FreeMode, Navigation, A11y } from "swiper/modules";
+import { EffectFade, FreeMode, Navigation, A11y, Virtual } from "swiper/modules";
+import Image from "next/image";
+import gallery from "../data/gallery.json"
 
 export const Slider = () => {
   const swiperRef = useRef();
@@ -12,14 +14,7 @@ export const Slider = () => {
     <div className="hidden md:flex h-[294px] xl:h-[447px]">
       <div className="w-[120px] xl:w-[313px] flex flex-col justify-end">
         <div className="opacity-20 w-full h-[87px] xl:h-[225px] mb-[47px] xl:mb-[70px]">
-          <picture>
-            <source src="/mountain-mobile.jpg" media="(max-width: 1279px)" />
-            <source src="/mountain-tablet.jpg" media="(min-width: 1280px)" />
-            <img
-              src="/mountain-tablet.jpg"
-              alt="high angle shot beautiful mountainous landscape with hills cloudy sky"
-            />
-          </picture>
+         <Image src="/gallery/mountain.jpg" width={120} height={87} alt="high angle shot beautiful mountainous landscape with hills cloudy sky"/>
         </div>
         <div className="mb-[17px] xl:mb-0 text-[33px] font-thin text-end hover:opacity-40">
           <button type="button" onClick={() => swiperRef.current?.slidePrev()}>
@@ -29,55 +24,32 @@ export const Slider = () => {
         </div>
       </div>
 
-      <div className="grow px-6 w-[415px] xl:w-[606px]">
+      <div className="grow px-6 w-[458px] h-[306px] xl:w-[669px] xl:h-[447px]">
         <Swiper
           loop={true}
           spaceBetween={10}
           effect={"fade"}
-          modules={[EffectFade, FreeMode, Navigation, A11y]}
+          modules={[EffectFade, FreeMode, Navigation, A11y, Virtual]}
           navigation={true}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
           className="mySwiper"
         >
-          <SwiperSlide>
-            <picture>
-              <source src="/mountain-tablet.jpg" media="(max-width: 1279px)" />
-              <source src="/mountain-desktop.jpg" media="(min-width: 1280px)" />
-              <img
-                src="/mountain-desktop.jpg"
-                alt="high angle shot beautiful mountainous landscape with hills cloudy sky"
-              />
-            </picture>
-          </SwiperSlide>
-          <SwiperSlide>
-            <picture>
-              <source src="/lake-tablet.jpg" media="(max-width: 1279px)" />
-              <source src="/lake-desktop.jpg" media="(min-width: 1280px)" />
-              <img
-                src="/lake-desktop.jpg"
-                alt="breathtaking view lake high carpathian mountains"
-              />
-            </picture>
-          </SwiperSlide>
-          <SwiperSlide>
-            <picture>
-              <source src="/village-tablet.jpg" media="(max-width: 1279px)" />
-              <source src="/village-desktop.jpg" media="(min-width: 1280px)" />
-              <img src="/village-desktop.jpg" alt="carpathian village" />
-            </picture>
-          </SwiperSlide>
+          {gallery.images.map(({url, alt}, index) => {
+            return (
+              <SwiperSlide key={ url} virtualIndex={index}>
+                <Image src={url} width={280} height={187} alt={alt}
+                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" />
+              </SwiperSlide>
+            )
+          })}
         </Swiper>
       </div>
 
       <div className="w-[120px] xl:w-[313px] flex flex-col justify-end">
         <div className="opacity-20 w-full h-[87px] xl:h-[225px] mb-[47px] xl:mb-[70px]">
-          <picture>
-            <source src="/village-mobile.jpg" media="(max-width: 1279px)" />
-            <source src="/village-tablet.jpg" media="(min-width: 1280px)" />
-            <img src="/village-tablet.jpg" alt="carpathian village" />
-          </picture>
+         <Image src={gallery.images[2].url} alt={gallery.images[2].alt} width={313} height={225} />
         </div>
         <div className="mb-[17px] xl:mb-0 text-[33px] font-thin hover:opacity-40">
           <button type="button" onClick={() => swiperRef.current?.slideNext()}>

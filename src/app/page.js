@@ -2,6 +2,9 @@ import { TheHeader } from "@/components/TheHeader";
 import { TheHero } from "@/components/TheHero";
 import { Contact } from "@/components/Contact";
 import { Gallery } from "@/components/Gallery";
+import { About } from "@/components/About";
+import { Services } from "@/components/Services";
+import { Career } from "@/components/Career";
 
 export default function Home() {
   return (
@@ -19,6 +22,9 @@ export default function Home() {
           <TheHero />
         </div>
       </div>
+      <About />
+      <Services />
+      <Career />
       <Gallery />
       <Contact />
     </main>

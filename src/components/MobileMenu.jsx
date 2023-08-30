@@ -22,6 +22,36 @@ export const MobileMenu = ({ onCloseMenu }) => {
           <ul className="flex flex-col gap-y-12 justify-center items-center">
             <li className="hover:underline">
               <Link
+                to="about"
+                smooth={true}
+                duration={1500}
+                onClick={onCloseMenu}
+              >
+                About
+              </Link>
+            </li>
+            <li className="hover:underline">
+              <Link
+                to="services"
+                smooth={true}
+                duration={1500}
+                onClick={onCloseMenu}
+              >
+                Services
+              </Link>
+            </li>
+            <li className="hover:underline">
+              <Link
+                to="career"
+                smooth={true}
+                duration={1500}
+                onClick={onCloseMenu}
+              >
+                Career
+              </Link>
+            </li>
+            <li className="hover:underline">
+              <Link
                 to="gallery"
                 smooth={true}
                 duration={1500}

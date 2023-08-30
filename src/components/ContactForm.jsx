@@ -65,7 +65,7 @@ export const ContactForm = () => {
             </p>
           )}
         </div>
-        <div className="basis-1/2">
+        <div className="xl:basis-1/2">
           <label
             htmlFor="email"
             className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"

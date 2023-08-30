@@ -1,0 +1,20 @@
+{
+    "titleMedium": " GALLERY",
+    "titleThin": "OUR",
+    "backButton": "BACK",
+    "nextButton": "NEXT",
+    "images": [
+        {
+            "url": "/gallery/mountain.jpg",
+            "alt": "high angle shot beautiful mountainous landscape with hills cloudy sky"
+        },
+        {
+            "url": "/gallery/lake.jpg",
+            "alt": "breathtaking view lake high carpathian mountains"
+        },
+        {
+            "url":"/gallery/village.jpg",
+            "alt": "carpathian village"
+        }
+    ]
+}
