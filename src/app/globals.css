@@ -82,6 +82,46 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
+.services1 {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  background-color: #0A1813;
+  background-image:  url("/bg/services/bg-02-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.services2 {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  background-color: #0A1813;
+  background-image:  url("/bg/services/bg-03-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.services3 {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  background-color: #0A1813;
+  background-image:  url("/bg/services/bg-04-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.services4 {
+  width: 100vw;
+  height: auto;
+  margin: 0 auto;
+  background-color: #0A1813;
+  background-image:  url("/bg/services/bg-05-mobile.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
 
 .career {
   width: 100vw;
@@ -120,6 +160,18 @@ img {
   .services {
     background-image:  url("/bg/services/bg-01-mobile@2x.jpg");
   }
+  .services1 {
+    background-image:  url("/bg/services/bg-02-mobile@2x.jpg");
+  }
+  .services2 {
+    background-image:  url("/bg/services/bg-03-mobile@2x.jpg");
+  }
+  .services3 {
+    background-image:  url("/bg/services/bg-04-mobile@2x.jpg");
+  }
+  .services4 {
+    background-image:  url("/bg/services/bg-05-mobile@2x.jpg");
+  }
   .career {
     background-image:  url("/bg/career/bg-mobile@2x.jpg");
   }
@@ -141,6 +193,18 @@ img {
   .services {
     background-image: url("/bg/services/bg-01-tablet.jpg");
   }
+  .services1 {
+    background-image: url("/bg/services/bg-02-tablet.jpg");
+  }
+  .services2 {
+    background-image: url("/bg/services/bg-03-tablet.jpg");
+  }
+  .services3 {
+    background-image: url("/bg/services/bg-04-tablet.jpg");
+  }
+  .services4 {
+    background-image: url("/bg/services/bg-05-tablet.jpg");
+  }
   .career {
     background-image: url("/bg/career/bg-tablet.jpg");
   }
@@ -161,6 +225,18 @@ img {
     }
     .services {
       background-image: url("/bg/services/bg-01-tablet@2x.jpg");
+    }
+    .services1 {
+      background-image: url("/bg/services/bg-02-tablet@2x.jpg");
+    }
+    .services2 {
+      background-image: url("/bg/services/bg-03-tablet@2x.jpg");
+    }
+    .services3 {
+      background-image: url("/bg/services/bg-04-tablet@2x.jpg");
+    }
+    .services4 {
+      background-image: url("/bg/services/bg-05-tablet@2x.jpg");
     }
     .career {
       background-image: url("/bg/career/bg-tablet@2x.jpg");
@@ -184,6 +260,18 @@ img {
   .services {
     background-image:  url("/bg/services/bg-01-desktop.jpg");
   }
+  .services1 {
+    background-image:  url("/bg/services/bg-02-desktop.jpg");
+  }
+  .services2 {
+    background-image:  url("/bg/services/bg-03-desktop.jpg");
+  }
+  .services3 {
+    background-image:  url("/bg/services/bg-04-desktop.jpg");
+  }
+  .services4 {
+    background-image:  url("/bg/services/bg-05-desktop.jpg");
+  }
   .career {
     background-image:  url("/bg/career/bg-desktop.jpg");
   }
@@ -204,6 +292,18 @@ img {
     }
     .services {
       background-image:  url("/bg/services/bg-01-desktop@2x.jpg");
+    }
+    .services1 {
+      background-image:  url("/bg/services/bg-02-desktop@2x.jpg");
+    }
+    .services2 {
+      background-image:  url("/bg/services/bg-03-desktop@2x.jpg");
+    }
+    .services3 {
+      background-image:  url("/bg/services/bg-04-desktop@2x.jpg");
+    }
+    .services4 {
+      background-image:  url("/bg/services/bg-05-desktop@2x.jpg");
     }
     .career {
       background-image:  url("/bg/career/bg-desktop@2x.jpg");

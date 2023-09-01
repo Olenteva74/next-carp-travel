@@ -27,8 +27,10 @@ export const Services = () => {
     setActiveInd(index);
     swiperRef.current?.slideTo(index);
   };
+  let sectionName;
+  activeInd === 0 ? sectionName="services" : sectionName=`services${activeInd}`;
   return (
-    <Section name="services">
+    <Section name={sectionName}>
       <Container>
         <div className="md:flex md:justify-between md:mb-9 xl:mb-[21px]">
           <div className="mb-6 md:mb-0">
