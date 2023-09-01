@@ -5,7 +5,7 @@ export const HeroButton = ({ name }) => {
   return (
     <div
       className="border-white
-      bg-[rgba(255, 255, 255, 0.10)] md:bg-[rgba(255, 255, 255, 0.05)] 
+      bg-[hsla(0,0%,100%,.1)] md:bg-[hsla(0,0%,100%,.05]
       text-lg xl:text-[32px] leading-[2.67] md:leading-tight font-bold"
     >
       <div className="flex justify-between">
