@@ -1,6 +1,7 @@
 import { NavLink } from "./NavLink";
+import { Subtitle } from "./Subtitle";
 
-export const NavList = ({ list, activeIndex, setindex }) => {
+export const NavList = ({ list, activeIndex, setindex, titleList }) => {
   let classNames;
   const styledLink = "opacity-50 font-extralight";
   const activeLink = "font-medium list-disc list-inside";
@@ -11,12 +12,25 @@ export const NavList = ({ list, activeIndex, setindex }) => {
           ? (classNames = activeLink)
           : (classNames = styledLink);
         return (
-          <li key={index} className={classNames}
-          onClick={() => {setindex(index)}}>
-            <NavLink text={link} />
+          <li
+            key={index}
+            className={classNames}
+            onClick={() => {
+              setindex(index);
+            }}
+          >
+            <>
+              <NavLink text={link} />
+              {index === activeIndex && (
+                <div className="hidden xl:inline-block">
+                  <Subtitle text={titleList[activeIndex]} />
+                </div>
+              )}
+            </>
           </li>
         );
       })}
     </ul>
   );
 };
+

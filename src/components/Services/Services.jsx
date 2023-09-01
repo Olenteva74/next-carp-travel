@@ -15,7 +15,7 @@ import Image from "next/image";
 import { Section } from "../Section";
 import { Container } from "../Container";
 import { Title } from "../Title";
-import { Subtitle } from "../Contact/Subtitle";
+import { Subtitle } from "./Subtitle";
 import { Paragraph } from "./Paragraph";
 import { Fraction } from "./Fraction";
 import { NavList } from "./Navlist";
@@ -32,14 +32,14 @@ export const Services = () => {
   return (
     <Section name={sectionName}>
       <Container>
-        <div className="md:flex md:justify-between md:mb-9 xl:mb-[21px]">
+        <div className="md:flex md:gap-[170px] xl:gap-[162px] md:mb-9 xl:mb-[21px]">
           <div className="mb-6 md:mb-0">
             <Title
               title={services.titleThin}
               titleAccent={services.titleMedium}
             />
           </div>
-          <div className="text-end mb-4 md:mb-0">
+          <div className="grow text-end md:text-start mb-4 md:mb-0">
             <Fraction
               num={String(activeInd + 1)}
               total={String(services.images.length)}
@@ -72,9 +72,9 @@ export const Services = () => {
               })}
             </Swiper>
           </div>
-          <div className="md:flex md:flex-col md:justify-between">
-            <div className="md:flex md:flex-col-reverse xl:flex-row-reverse md:gap-[25px] xl:gap-[60px]">
-              <div className="mb-6 md:mb-0 xl:w-[293px]">
+          <div className="md:flex md:flex-col md:justify-between xl:grow">
+            <div className="md:flex md:flex-col-reverse md:gap-[25px]">
+              <div className="mb-6 md:mb-0 xl:hidden">
                 <Subtitle text={services.title[activeInd]} />
               </div>
               <NavList
@@ -82,6 +82,7 @@ export const Services = () => {
                 list={services.paginationList}
                 activeIndex={activeInd}
                 setindex={handleInd}
+                titleList={services.title}
               />
             </div>
             <div className="xl:flex xl:flex-row-reverse">
