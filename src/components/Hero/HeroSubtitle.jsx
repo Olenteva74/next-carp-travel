@@ -1,10 +1,10 @@
 export const HeroSubtitle = ({subtitleMedium, subtitleThin, subtitleLight}) => {
     return (
         <h2>
-          <div className="text-[37px] md:text-[67px] xl:text-[98px] flex justify-center">
+          <span className="text-[37px] md:text-[67px] xl:text-[98px] flex justify-center">
             <span className="font-medium">{subtitleMedium}</span>
             <span className="font-thin">{subtitleThin}</span>
-          </div>
+          </span>
           <span
             className="block text-center
           text-xs md:text-sm xl:text-base
