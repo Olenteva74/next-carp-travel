@@ -2,6 +2,7 @@
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { nanoid } from "nanoid";
 
 const nameRegExp = /^\s*[\S]+(\s[\S]+)+\s*$/;
 const phoneRegExp = /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/;
@@ -14,6 +15,12 @@ const schema = yup.object().shape({
 });
 
 export const Form = () => {
+    const nameId = nanoid();
+    const emailId = nanoid();
+    const positionId = nanoid();
+    const phoneId = nanoid();
+    const textareaId = nanoid();
+    const checkboxId = nanoid();
     const {
         register,
         handleSubmit,
@@ -36,14 +43,14 @@ export const Form = () => {
          <div className="md:basis-1/2">
             <div>
               <label
-                htmlFor="fullName"
+                htmlFor={nameId}
                 className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"
               >
                 Full name
               </label>
               <input
                 type="text"
-                id="fullName"
+                id={nameId}
                 placeholder="John Smith"
                 {...register("fullName")}
                 className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
@@ -69,14 +76,14 @@ export const Form = () => {
             </div>
             <div>
               <label
-                htmlFor="email"
+                htmlFor={emailId}
                 className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"
               >
                 E-mail
               </label>
               <input
                 type="text"
-                id="email"
+                id={emailId}
                 placeholder="johnsmith@email.com"
                 {...register("email")}
                 className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
@@ -103,14 +110,14 @@ export const Form = () => {
             </div>
             <div>
               <label
-                htmlFor="position"
+                htmlFor={positionId}
                 className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"
               >
                 Position
               </label>
               <input
                 type="text"
-                id="position"
+                id={positionId}
                 placeholder="Movie maker"
                 {...register("position")}
                 className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
@@ -119,14 +126,14 @@ export const Form = () => {
             </div>
             <div>
               <label
-                htmlFor="phone"
+                htmlFor={phoneId}
                 className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"
               >
                 Phone
               </label>
               <input
                 type="text"
-                id="phone"
+                id={phoneId}
                 placeholder="+ 38 (097) 12 34 567"
                 {...register("phone")}
                 className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
@@ -153,13 +160,13 @@ export const Form = () => {
           </div>
           <div className="md:basis-1/2">
             <label
-              htmlFor="message"
+              htmlFor={textareaId}
               className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"
             >
               Message
             </label>
             <textarea
-              id="message"
+              id={textareaId}
               {...register("message")}
               className="block w-full h-[196px]  xl:h-[268px] py-3 px-4  bg-[rgba(255, 255, 255, 0.05)] 
               opacity-20  focus:outline-none text-black"
@@ -169,9 +176,9 @@ export const Form = () => {
           <div className="md:flex md:justify-between">
           <div className="flex gap-2">
           <div className="w-6 h-6">
-          <input type="checkbox" name="confirm" id="confirm" />
+          <input type="checkbox" name="confirm" id={checkboxId} />
           </div>
-          <label htmlFor="confirm" className="text-[12px] leading-[1.83] xl:leading-[2] md:w-[192px] md:h-[44px]">
+          <label htmlFor={checkboxId} className="text-[12px] leading-[1.83] xl:leading-[2] md:w-[192px] md:h-[44px]">
                 <span className="font-extralight">I confirm my consent to the processing of personal data.</span>
             </label>
           </div>
