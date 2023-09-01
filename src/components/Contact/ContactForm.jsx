@@ -48,8 +48,8 @@ export const ContactForm = () => {
             id={nameId}
             placeholder="John Smith"
             {...register("fullName")}
-            className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
-        text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 opacity-20  focus:outline-none text-black"
+            className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)] 
+        text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:opacity-20"
           />
           {errors.fullName && (
             <p className="flex items-center justify-end text-[12px] leading-[2]  tracking-[2.4px] text-[#FF5757]">
@@ -81,9 +81,9 @@ export const ContactForm = () => {
             id={emailId}
             placeholder="johnsmith@email.com"
             {...register("email")}
-            className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
+            className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)]
         text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2]
-        mb-1 opacity-20 text-black focus:outline-none"
+        mb-1 text-white focus:outline-none placeholder:opacity-20"
           />
           {errors.email && (
             <p className="flex items-center justify-end text-[12px] leading-[2]  tracking-[2.4px] text-[#FF5757]">
@@ -114,11 +114,11 @@ export const ContactForm = () => {
         <textarea
           id={textareaId}
           {...register("message")}
-          className="block w-full h-[193px] md:h-[221px] xl:h-[174px] py-3 px-4  bg-[rgba(255, 255, 255, 0.05)] 
-          opacity-20 mb-4 xl:mb-6 focus:outline-none text-black"
+          className="block w-full h-[193px] md:h-[221px] xl:h-[174px] py-3 px-4 bg-[hsla(0,0%,100%,.05)] 
+          mb-4 xl:mb-6 focus:outline-none text-white"
         ></textarea>
         <div className="text-end">
-          <button className="text-3xl font-medium xl:text-[32px] hover:opacity-40">
+          <button type="submit" className="text-3xl font-medium xl:text-[32px] hover:opacity-40">
             SEND
           </button>
         </div>

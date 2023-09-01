@@ -53,8 +53,8 @@ export const Form = () => {
                 id={nameId}
                 placeholder="John Smith"
                 {...register("fullName")}
-                className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
-            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 opacity-20  focus:outline-none text-black"
+                className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)] 
+            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:opacity-20"
               />
               {errors.fullName && (
                 <p className="flex items-center justify-end text-[12px] leading-[2]  tracking-[2.4px] text-[#FF5757]">
@@ -86,9 +86,9 @@ export const Form = () => {
                 id={emailId}
                 placeholder="johnsmith@email.com"
                 {...register("email")}
-                className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
+                className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)] 
             text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2]
-            mb-1 opacity-20 text-black focus:outline-none"
+            mb-1 text-white focus:outline-none placeholder:opacity-20"
               />
               {errors.email && (
                 <p className="flex items-center justify-end text-[12px] leading-[2]  tracking-[2.4px] text-[#FF5757]">
@@ -120,8 +120,8 @@ export const Form = () => {
                 id={positionId}
                 placeholder="Movie maker"
                 {...register("position")}
-                className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
-            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 opacity-20  focus:outline-none text-black"
+                className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)]  
+            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:opacity-20"
               />
             </div>
             <div>
@@ -136,8 +136,8 @@ export const Form = () => {
                 id={phoneId}
                 placeholder="+ 38 (097) 12 34 567"
                 {...register("phone")}
-                className="block w-full pl-2 pr-[50px] bg-[rgba(255, 255, 255, 0.05)] 
-            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 opacity-20  focus:outline-none text-black"
+                className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)]  
+            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:opacity-20"
               />
               {errors.phone && (
                 <p className="flex items-center justify-end text-[12px] leading-[2]  tracking-[2.4px] text-[#FF5757]">
@@ -168,8 +168,8 @@ export const Form = () => {
             <textarea
               id={textareaId}
               {...register("message")}
-              className="block w-full h-[196px]  xl:h-[268px] py-3 px-4  bg-[rgba(255, 255, 255, 0.05)] 
-              opacity-20  focus:outline-none text-black"
+              className="block w-full h-[196px]  xl:h-[268px] py-3 px-4 bg-[hsla(0,0%,100%,.05)] 
+             focus:outline-none text-white"
             ></textarea>
           </div>
          </div>
@@ -183,7 +183,7 @@ export const Form = () => {
             </label>
           </div>
             <div className="text-end">
-              <button className="text-3xl font-medium xl:text-[32px] hover:opacity-40">SEND</button>
+              <button type="submit" className="text-3xl font-medium xl:text-[32px] hover:opacity-40">SEND</button>
             </div>
           </div>
         </form>
