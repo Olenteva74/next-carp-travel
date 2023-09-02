@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { nanoid } from "nanoid";
+import { ErrorMessage } from "../Contact/ErrorMessage";
 
 const nameRegExp = /^\s*[\S]+(\s[\S]+)+\s*$/;
 const phoneRegExp = /\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}/;
@@ -41,7 +42,7 @@ export const Form = () => {
         >
          <div className="md:flex md:gap-5 xl:gap-6">
          <div className="md:basis-1/2">
-            <div>
+            <div className="relative mb-4 xl:mb-[26px]">
               <label
                 htmlFor={nameId}
                 className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"
@@ -54,27 +55,13 @@ export const Form = () => {
                 placeholder="John Smith"
                 {...register("fullName")}
                 className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)] 
-            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:opacity-20"
+            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:text-[hsla(0, 0%, 100%, 0.2)]"
               />
               {errors.fullName && (
-                <p className="flex items-center justify-end text-[12px] leading-[2]  tracking-[2.4px] text-[#FF5757]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                  >
-                    <path
-                      d="M4.375 4.375L13.625 13.625M13.625 4.375L4.375 13.625"
-                      stroke="currentColor"
-                    />
-                  </svg>
-                  <span>incorrect name</span>
-                </p>
+                <ErrorMessage message="incorrect name"/>
               )}
             </div>
-            <div>
+            <div className="relative mb-4 xl:mb-[26px]">
               <label
                 htmlFor={emailId}
                 className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"
@@ -88,27 +75,13 @@ export const Form = () => {
                 {...register("email")}
                 className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)] 
             text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2]
-            mb-1 text-white focus:outline-none placeholder:opacity-20"
+            mb-1 text-white focus:outline-none placeholder:text-[hsla(0, 0%, 100%, 0.2)]"
               />
               {errors.email && (
-                <p className="flex items-center justify-end text-[12px] leading-[2]  tracking-[2.4px] text-[#FF5757]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                  >
-                    <path
-                      d="M4.375 4.375L13.625 13.625M13.625 4.375L4.375 13.625"
-                      stroke="currentColor"
-                    />
-                  </svg>
-                  <span>invalid email</span>
-                </p>
+               <ErrorMessage message="invalid email"/>
               )}
             </div>
-            <div>
+            <div className="mb-4 xl:mb-[26px]">
               <label
                 htmlFor={positionId}
                 className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"
@@ -121,10 +94,10 @@ export const Form = () => {
                 placeholder="Movie maker"
                 {...register("position")}
                 className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)]  
-            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:opacity-20"
+            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:text-[hsla(0, 0%, 100%, 0.2)]"
               />
             </div>
-            <div>
+            <div className="relative mb-4">
               <label
                 htmlFor={phoneId}
                 className="block text-[12px] leading-[2]  tracking-[2.4px] mb-1"
@@ -137,24 +110,10 @@ export const Form = () => {
                 placeholder="+ 38 (097) 12 34 567"
                 {...register("phone")}
                 className="block w-full pl-2 pr-[50px] bg-[hsla(0,0%,100%,.05)]  
-            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:opacity-20"
+            text-[13px] leading-[1.85] xl:text-[20px] xl:leading-[1.2] mb-1 focus:outline-none text-white placeholder:text-[hsla(0, 0%, 100%, 0.2)]"
               />
               {errors.phone && (
-                <p className="flex items-center justify-end text-[12px] leading-[2]  tracking-[2.4px] text-[#FF5757]">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="18"
-                    height="18"
-                    viewBox="0 0 18 18"
-                    fill="none"
-                  >
-                    <path
-                      d="M4.375 4.375L13.625 13.625M13.625 4.375L4.375 13.625"
-                      stroke="currentColor"
-                    />
-                  </svg>
-                  <span>Incorrect phone</span>
-                </p>
+                <ErrorMessage message="Incorrect phone"/>
               )}
             </div>
           </div>
@@ -168,7 +127,7 @@ export const Form = () => {
             <textarea
               id={textareaId}
               {...register("message")}
-              className="block w-full h-[196px]  xl:h-[268px] py-3 px-4 bg-[hsla(0,0%,100%,.05)] 
+              className="block w-full h-[196px] md:h-[228px]  xl:h-[268px] py-3 px-4 bg-[hsla(0,0%,100%,.05)] 
              focus:outline-none text-white"
             ></textarea>
           </div>

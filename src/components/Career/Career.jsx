@@ -9,7 +9,7 @@ import { Form } from "./Form";
 
 export const Career = () => {
     return (
-      <div>
+      <>
          <Section name="career">
         <Container>
        <div className="md:flex md:justify-between md:mb-3 xl:mb-">
@@ -50,6 +50,6 @@ export const Career = () => {
          <Form/>
         </Container>
        </div>
-      </div>
+      </>
     )
 }
