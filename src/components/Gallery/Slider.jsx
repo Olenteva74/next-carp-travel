@@ -6,7 +6,6 @@ import "swiper/css/effect-fade";
 import "swiper/css/navigation";
 import { EffectFade, FreeMode, Navigation, A11y, Virtual } from "swiper/modules";
 import Image from "next/image";
-// import gallery from "../data/gallery.json"
 
 export const Slider = ({images}) => {
   const swiperRef = useRef();

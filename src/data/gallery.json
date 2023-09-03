@@ -15,6 +15,18 @@
         {
             "url":"/village.jpg",
             "alt": "carpathian village"
+        },
+        {
+            "url": "/mountain.jpg",
+            "alt": "high angle shot beautiful mountainous landscape with hills cloudy sky"
+        },
+        {
+            "url": "/lake.jpg",
+            "alt": "breathtaking view lake high carpathian mountains"
+        },
+        {
+            "url":"/village.jpg",
+            "alt": "carpathian village"
         }
     ]
 }
