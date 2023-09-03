@@ -13,7 +13,7 @@ export const Gallery = () => {
           <Title title={gallery.titleThin} titleAccent={gallery.titleMedium} />
         </div>
         <VerticalSwiper images={gallery.images} />
-        <Slider images={gallery.images} />
+        <Slider images={gallery.images} backButton={gallery.backButton} nextButton={gallery.nextButton} />
       </Container>
     </Section>
   );

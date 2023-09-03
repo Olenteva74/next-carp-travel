@@ -2,60 +2,70 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
-import { EffectFade, FreeMode, Navigation, A11y, Virtual } from "swiper/modules";
+import "swiper/css/effect-coverflow";
+import {
+  EffectCoverflow,
+  FreeMode,
+  A11y,
+  Virtual,
+} from "swiper/modules";
 import Image from "next/image";
+import { SliderButton } from "./SliderButton";
 
-export const Slider = ({images}) => {
+export const Slider = ({ images, backButton, nextButton }) => {
   const swiperRef = useRef();
+  const handleClickBack = () => {
+    swiperRef.current?.slidePrev();
+  };
+  const handleClickNext = () => {
+    swiperRef.current?.slideNext();
+  };
   return (
-    <div className="hidden md:flex h-[294px] xl:h-[447px]">
-      <div className="w-[120px] xl:w-[313px] flex flex-col justify-end">
-        <div className="opacity-20 w-[120px] xl:w-[305px] h-[87px] xl:h-[225px] mb-[47px] xl:mb-[70px]">
-         <Image src={images[0].url} width={120} height={87} alt={images[0].alt}/>
-        </div>
-        <div className="mb-[17px] xl:mb-0 text-[33px] font-thin text-end hover:opacity-40">
-          <button type="button" onClick={() => swiperRef.current?.slidePrev()}>
-            {" "}
-            BACK
-          </button>
-        </div>
-      </div>
-
-      <div className="grow px-6 w-[458px] h-[306px] xl:w-[669px] xl:h-[447px]">
+    <div>
+      <div className="hidden md:flex h-[306px] w-full xl:h-[447px]">
         <Swiper
           loop={true}
-          spaceBetween={10}
-          effect={"fade"}
-          modules={[EffectFade, FreeMode, Navigation, A11y, Virtual]}
-          navigation={true}
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={2}
+          spaceBetween={100}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 500,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          modules={[EffectCoverflow, FreeMode, A11y, Virtual]}
           onBeforeInit={(swiper) => {
             swiperRef.current = swiper;
           }}
-          className="mySwiper"
         >
           {images.map((image, index) => {
             return (
               <SwiperSlide key={index} virtualIndex={index}>
-                <Image src={image.url} width={415} height={294} alt={image.alt}
-                 sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw" />
+                <Image
+                  src={image.url}
+                  width={460}
+                  height={306}
+                  alt={image.alt}
+                  sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
+                />
               </SwiperSlide>
-            )
+            );
           })}
         </Swiper>
       </div>
-
-      <div className="w-[120px] xl:w-[313px] flex flex-col justify-end">
-        <div className="opacity-20 w-full h-[87px] xl:h-[225px] mb-[47px] xl:mb-[70px]">
-         <Image src={images[2].url} alt={images[2].alt} width={120} height={87} />
-        </div>
-        <div className="mb-[17px] xl:mb-0 text-[33px] font-thin hover:opacity-40">
-          <button type="button" onClick={() => swiperRef.current?.slideNext()}>
-            {" "}
-            NEXT
-          </button>
-        </div>
+      <div className="flex justify-between w-[500px] xl:w-[750px] mx-auto relative top-[-40px] mb-[-40px]">
+        <SliderButton
+          name={backButton}
+          handleClick={handleClickBack}
+        />
+        <SliderButton
+          name={nextButton}
+          handleClick={handleClickNext}
+        />
       </div>
     </div>
   );
