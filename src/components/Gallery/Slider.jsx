@@ -57,7 +57,7 @@ export const Slider = ({ images, backButton, nextButton }) => {
           })}
         </Swiper>
       </div>
-      <div className="flex justify-between w-[500px] xl:w-[750px] mx-auto relative top-[-40px] mb-[-40px]">
+      <div className="hidden md:flex justify-between w-[500px] xl:w-[750px] mx-auto relative top-[-40px] mb-[-40px] z-10">
         <SliderButton
           name={backButton}
           handleClick={handleClickBack}
