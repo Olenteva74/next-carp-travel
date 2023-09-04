@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
+import { toast } from "react-toastify";
 import { ErrorMessage } from "../Contact/ErrorMessage";
 
 const nameRegExp = /^\s*[\S]+(\s[\S]+)+\s*$/;
@@ -14,13 +15,14 @@ const schema = yup.object().shape({
   position: yup.string(),
   phone: yup.string().trim().matches(phoneRegExp).required(),
   message: yup.string(),
-  confirmed: yup
+  confirm: yup
     .bool()
     .oneOf(
       [true],
       "Confirm your consent to the processing of personal data is required"
     ),
 });
+const CAREER_FORM = "careerForm";
 
 export const Form = () => {
   const [confirmed, setConfirmed] = useState(false);
@@ -38,11 +40,16 @@ export const Form = () => {
   });
   const onSubmit = (values) => {
     console.log(values);
+    localStorage.setItem(CAREER_FORM, JSON.stringify(values));
+    toast.success(`Your data has been successfully saved`, {
+      theme: "light",
+      position: toast.POSITION.BOTTOM_CENTER,
+    });
     reset();
   };
   return (
     <form
-      name="careerForm"
+      name={CAREER_FORM}
       onSubmit={handleSubmit(onSubmit)}
       className="font-extralight
         md:flex md:flex-col md:gap-4 xl:gap-6"
@@ -137,7 +144,7 @@ export const Form = () => {
         <label className="flex gap-2 relative">
           <input
             type="checkbox"
-            {...register("confirmed")}
+            {...register("confirm")}
             onChange={handleCheckbox}
             className="absolute w-px h-px top-0 left-0"
           />
@@ -177,6 +184,12 @@ export const Form = () => {
             I confirm my consent to the processing of personal data.
           </span>
         </label>
+        {errors.confirm &&
+          !confirmed &&
+          toast.error(errors.confirm?.message, {
+            theme: "light",
+            position: toast.POSITION.BOTTOM_RIGHT,
+          })}
         <div className="text-end">
           <button
             type="submit"
