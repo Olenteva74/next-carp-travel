@@ -5,7 +5,7 @@ export const Menu = ({menu, styled, menuClose}) => {
         <ul className={styled}>
             {menu.map((link, index) => {
                 return (
-                    <li key={index} className="cursor-pointer hover:outline hover:rounded-sm focus:outline focus:rounded-sm">
+                    <li key={index} className="cursor-pointer hover:outline hover:rounded-sm focus:outline focus:rounded-sm hover:transition-all focus:transition-all">
                        <MenuLink link={link} handleClick={menuClose}/>
                     </li>
                 )

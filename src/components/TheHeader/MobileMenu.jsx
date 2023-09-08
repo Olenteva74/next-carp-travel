@@ -11,7 +11,7 @@ export const MobileMenu = ({ onCloseMenu }) => {
       <div className="flex justify-center items-center">
         <button
           type="button"
-          className="absolute top-[43px] right-[20px] text-sm tracking-[1.4px] cursor-pointer hover:outline hover:rounded-sm focus:outline focus:rounded-sm"
+          className="absolute top-[43px] right-[20px] text-sm tracking-[1.4px] cursor-pointer hover:outline hover:rounded-sm focus:outline focus:rounded-sm hover:transition-all focus:transition-all"
           onClick={onCloseMenu}
         >
           {header.buttonClose}

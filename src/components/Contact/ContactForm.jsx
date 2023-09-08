@@ -93,7 +93,7 @@ export const ContactForm = () => {
         <div className="text-end">
           <button
             type="submit"
-            className="text-3xl font-medium xl:text-[32px] hover:opacity-40"
+            className="text-3xl font-medium xl:text-[32px] hover:opacity-40 focus:opacity hover:transition-all focus:transition-all"
           >
             SEND
           </button>

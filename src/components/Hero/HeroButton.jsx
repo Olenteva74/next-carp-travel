@@ -13,7 +13,7 @@ export const HeroButton = ({ name }) => {
         <div className="w-[42px] md:w-[34px] xl:w-[44px] h-2  xl:h-[10px] border-t border-r"></div>
       </div>
       <div
-        className="flex justify-center items-center cursor-pointer hover:opacity-40 
+        className="flex justify-center items-center cursor-pointer hover:opacity-40 hover:transition-all focus:transition-all 
          h-[37px]  xl:h-[51px]"
       >
         <Link to="/contacts" smooth={true} duration={1500}>

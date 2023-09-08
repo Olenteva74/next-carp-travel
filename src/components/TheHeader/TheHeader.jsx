@@ -31,7 +31,7 @@ export const TheHeader = () => {
           </nav>
           <button
             type="button"
-            className="md:hidden text-sm tracking-[1.4px] cursor-pointer hover:outline hover:rounded-sm focus:outline focus:rounded-sm"
+            className="md:hidden text-sm tracking-[1.4px] cursor-pointer hover:outline hover:rounded-sm focus:outline focus:rounded-sm hover:transition-all focus:transition-all"
             onClick={handleOpenMenu}
           >
             {header.buttonOpen}
