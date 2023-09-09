@@ -14,7 +14,7 @@ export const TheHero = () => {
       <HeroContainer>
     <div
       className="flex flex-col md:flex-row md:justify-between
-  md:grid md:grid-cols-[426px_230px] xl:grid-cols-[646px_305px] 
+  md:grid md:grid-cols-[426px_230px] xl:grid-cols-[646px_295px] 
   md:grid-rows-[144px_201px] xl:grid-rows-[310px_219px]"
     >
       <div className="md:flex md:flex-col md:justify-between md:row-span-2">
