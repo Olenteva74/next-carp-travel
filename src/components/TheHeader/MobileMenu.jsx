@@ -6,7 +6,7 @@ export const MobileMenu = ({ onCloseMenu }) => {
   return (
     <div
       className="fixed top-0 left-0 w-full h-full bg-[rgba(1, 10, 5, 0.75)] backdrop-blur-xl
-    flex justify-center items-center"
+    flex justify-center items-center z-10"
     >
       <div className="flex justify-center items-center">
         <button
