@@ -40,7 +40,6 @@ export const Form = () => {
     resolver: yupResolver(schema),
   });
   const onSubmit = (values) => {
-    console.log(values);
     sendEmail(values);
     localStorage.setItem(CAREER_FORM, JSON.stringify(values));
     toast.success(`Your data has been successfully saved`, {
