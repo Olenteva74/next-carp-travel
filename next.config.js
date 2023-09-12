@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        formats: ['image/webp'],
-      },
-}
+  images: {
+    formats: ["image/webp"],
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

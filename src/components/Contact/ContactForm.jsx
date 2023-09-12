@@ -4,6 +4,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { toast } from "react-toastify";
 import { ErrorMessage } from "./ErrorMessage";
+import { sendEmail } from "@/utils/sendEmail";
 
 const nameRegExp = /^\s*[\S]+(\s[\S]+)+\s*$/;
 const schema = yup.object().shape({
@@ -25,6 +26,7 @@ export const ContactForm = () => {
 
   const onSubmit = (values) => {
     console.log(values);
+    sendEmail(values);
     localStorage.setItem(CONTACT_FORM, JSON.stringify(values));
     toast.success(`Your data has been successfully saved`, {
       theme: "light",
@@ -32,6 +34,7 @@ export const ContactForm = () => {
     });
     reset();
   };
+
   return (
     <form
       name={CONTACT_FORM}

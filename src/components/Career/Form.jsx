@@ -5,6 +5,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { toast } from "react-toastify";
 import { ErrorMessage } from "../Contact/ErrorMessage";
+import { sendEmail } from "@/utils/sendEmail";
 
 const nameRegExp = /^\s*[\S]+(\s[\S]+)+\s*$/;
 const phoneRegExp =
@@ -40,6 +41,7 @@ export const Form = () => {
   });
   const onSubmit = (values) => {
     console.log(values);
+    sendEmail(values);
     localStorage.setItem(CAREER_FORM, JSON.stringify(values));
     toast.success(`Your data has been successfully saved`, {
       theme: "light",
